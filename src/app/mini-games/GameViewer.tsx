@@ -1,18 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button } from "@chakra-ui/react"; 
 import {
   Maximize2,
   Trophy,
   Clock,
   Users,
-  Star,
-  Timer,
-  Zap,
-  Brain,
-  ArrowRight,
+  Star
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -28,21 +23,7 @@ interface GameDetails {
   features: string[];
 }
 
-interface GameViewerProps {
-  gameUrl: string;
-  title: string;
-  description: string;
-  features?: GameFeature[];
-  gameDetails?: GameDetails;
-}
-
-export default function GameViewer({
-  gameUrl,
-  title,
-  description,
-  features,
-  gameDetails,
-}: GameViewerProps) {
+const GameViewer = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const toggleFullscreen = async () => {
@@ -77,10 +58,10 @@ export default function GameViewer({
           <Button
             onClick={toggleFullscreen}
             variant="ghost"
-            size="icon"
+            size="md"
             className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white"
           >
-            <Maximize2 className="h-4 w-4" />
+            <Maximize2 />
           </Button>
         </div>
 
@@ -267,4 +248,6 @@ export default function GameViewer({
       </div>
     </div>
   );
-}
+};
+
+export default GameViewer;

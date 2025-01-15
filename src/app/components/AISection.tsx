@@ -83,7 +83,7 @@ export default function AISection() {
                   "AI continuously refines and optimizes educational content based on performance data across all users.",
                 color: "#10B981",
               },
-            ].map((feature, index) => {
+            ].map((feature) => {
               const Icon = feature.icon;
               return (
                 <div key={feature.title} className="flex items-start space-x-4">

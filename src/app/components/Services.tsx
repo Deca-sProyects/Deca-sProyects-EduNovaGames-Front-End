@@ -2,14 +2,10 @@
 
 import { motion } from "framer-motion";
 import {
-  Cpu,
-  BookOpen,
-  Users,
   BarChart3,
   Zap,
   Brain,
-  Trophy,
-  Target,
+  Trophy
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";

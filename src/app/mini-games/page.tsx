@@ -9,16 +9,17 @@ import { Button } from "@/components/ui/button";
 import {
   Timer,
   FileText,
-  BarChartIcon as ChartBar,
+  BarChart as ChartBar,
   Trophy,
   Zap,
   Brain,
-  PuzzleIcon,
+  Puzzle,
   Text,
   Layers,
+  BookOpen,
+  Target
 } from "lucide-react";
 import Image from "next/image";
-import { BookOpen, Target } from "lucide-react";
 
 const games = [
   {
@@ -70,7 +71,7 @@ const games = [
       "Embark on a journey through multiple puzzle types while learning financial literacy! Connect cables, find paths, and solve parking challenges, each followed by educational questions. Perfect for developing problem-solving skills and financial knowledge.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Puzzle%20Quest-3Fw56MO6f7YYX96xV530LY9GJueo59.png",
-    icon: PuzzleIcon,
+    icon: Puzzle,
     color: "#22D3EE",
     tags: ["Multi-level", "Problem Solving", "Financial Literacy"],
     url: "#",
@@ -152,7 +153,7 @@ const games = [
   },
 ];
 
-export default function MiniGamesPage() {
+const Page = () => {
   const [selectedGame, setSelectedGame] = useState<number | null>(null);
 
   return (
@@ -257,4 +258,6 @@ export default function MiniGamesPage() {
       <Footer />
     </div>
   );
-}
+};
+
+export default Page;

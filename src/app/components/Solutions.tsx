@@ -10,6 +10,7 @@ import {
   Shield,
 } from "lucide-react";
 import Link from "next/link";
+import Image from 'next/image';
 
 const solutions = [
   {
@@ -155,10 +156,12 @@ export default function Solutions() {
               className="bg-white/5 rounded-xl p-6 backdrop-blur-sm"
             >
               <div className="aspect-video relative rounded-lg overflow-hidden mb-4">
-                <img
+                <Image
                   src={solutions[activeSolution].image}
                   alt={solutions[activeSolution].title}
-                  className="object-cover w-full h-full"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
